@@ -1,0 +1,149 @@
+<!-- <input id="input">
+<button onclick="update(event)">Add</button>
+<ul id="list-container">
+    <li>Hello
+        <button onclick="deleteitem(event)">delete</button>
+    </li>
+</ul>
+ 
+<script>
+    var input = document.getElementById('input');
+    var id = document.getElementById('list-container');
+
+    function update(event) {
+        // Prevent any default action (like form submission)
+        event.preventDefault();
+
+        // Create a new list item
+        var listitems = document.createElement("li");
+        listitems.innerHTML = input.value + " <button onclick='deleteitem(event)'>delete</button>";
+
+        // Append the new item to the list
+        id.append(listitems);
+
+        // Clear the input field
+        input.value = '';
+    }
+
+    function deleteitem(event) {
+        // Remove the parent element (the list item) of the clicked button
+        event.target.parentElement.remove();
+    }
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled To-Do List</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        /* Input field styling */
+        #input {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        /* Add button styling */
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Delete button styling */
+        button[onclick*="deleteitem"] {
+            background-color: #d9534f;
+        }
+
+        button[onclick*="deleteitem"]:hover {
+            background-color: #c9302c;
+        }
+
+        /* List container styling */
+        #list-container {
+            margin-top: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #list-container li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Add transition for smooth hover effect */
+        #list-container li:hover {
+            background-color: #f9f9f9;
+        }
+
+        .headd{
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headd">A little progress each day adds up to big results. 📝✨</h1>
+    <h1>To-Do List</h1>
+    <input id="input" placeholder="Enter a task">
+    <button onclick="update(event)">Add</button>
+    <ul id="list-container">
+        <li>Hello
+            <button onclick="deleteitem(event)">delete</button>
+        </li>
+    </ul>
+ 
+    <script>
+        var input = document.getElementById('input');
+        var id = document.getElementById('list-container');
+
+        function update(event) {
+            // Prevent any default action (like form submission)
+            event.preventDefault();
+
+            // Create a new list item
+            var listitems = document.createElement("li");
+            listitems.innerHTML = input.value + " <button onclick='deleteitem(event)'>delete</button>";
+
+            // Append the new item to the list
+            id.append(listitems);
+
+            // Clear the input field
+            input.value = '';
+        }
+
+        function deleteitem(event) {
+            // Remove the parent element (the list item) of the clicked button
+            event.target.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
+
